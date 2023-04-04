@@ -19,18 +19,18 @@ def konversi_awal(num, base):
 
 def basis_konversi(num, basis_awal, basis_akhir):
     if basis_awal == 10:
-        nomer_desimal = int(num)
+        nomer_pilihan = int(num)
     elif basis_awal == 2:
-        nomer_desimal = int(num, 2)
+        nomer_pilihan = int(num, 2)
     elif basis_awal == 8:
-        nomer_desimal = int(num, 8)
+        nomer_pilihan = int(num, 8)
     elif basis_awal == 16:
-        nomer_desimal = int(num, 16)
+        nomer_pilihan = int(num, 16)
 
     if basis_akhir == 10:
-        return str(nomer_desimal)
+        return str(nomer_pilihan)
     else:
-        return konversi_awal(nomer_desimal, basis_akhir)
+        return konversi_awal(nomer_pilihan, basis_akhir)
     
 def konversi():
     num = inputan.get()
@@ -118,10 +118,26 @@ label_keterangan9.pack(pady=2)
 label_keterangan10 = tk.Label( text="Masukkan String", font=("Arial", 14, "bold"), bg='#2193b0')
 label_keterangan10.pack(pady=2)
 
+label_keterangan11 = tk.Label(text="2: Biner", font=("Arial", 14, "bold"), bg='#2193b0')
+label_keterangan11.pack(pady=2)
+
+label_keterangan12 = tk.Label(text="8: Oktal", font=("Arial", 14, "bold"), bg='#2193b0')
+label_keterangan12.pack(pady=2)
+
+label_keterangan13 = tk.Label(text="10: Desimal", font=("Arial", 14, "bold"), bg='#2193b0')
+label_keterangan13.pack(pady=2)
+
+label_keterangan14 = tk.Label(text="16: Hexadesimal", font=("Arial", 14, "bold"), bg='#2193b0')
+label_keterangan14.pack(pady=2)
+
 # Keterangan Author
 label_keterangan7.place(relx=0.05, rely=0.7, anchor=tk.W)
 label_keterangan8.place(relx=0.05, rely=0.78, anchor=tk.W)
 label_keterangan9.place(relx=0.05, rely=0.86, anchor=tk.W)
+label_keterangan11.place(relx=0.53, rely=0.7, anchor=tk.W)
+label_keterangan12.place(relx=0.53, rely=0.78, anchor=tk.W)
+label_keterangan13.place(relx=0.53, rely=0.86, anchor=tk.W)
+label_keterangan14.place(relx=0.53, rely=0.93, anchor=tk.W)
 
 # Penaruhan Tata Letak Sistem Bilangan
 label_keterangan3.place(relx=0.805, rely=0.11, anchor=tk.SE)
@@ -144,15 +160,3 @@ hasil_ascii.place(relx=0.17, rely=0.4, anchor=tk.W)
 
 # Menjalankan GUI
 root.mainloop()
-
-
-
-
-# label_keterangan = tk.Label(text="2: Binary", font=("Arial", 14, "bold"), bg='#2193b0')
-# label_keterangan.pack(pady=2)
-# label_keterangan = tk.Label(text="8: Octal", font=("Arial", 14, "bold"), bg='#2193b0')
-# label_keterangan.pack(pady=2)
-# label_keterangan = tk.Label(text="10: Decimal", font=("Arial", 14, "bold"), bg='#2193b0')
-# label_keterangan.pack(pady=2)
-# label_keterangan = tk.Label(text="16: Hexadecimal", font=("Arial", 14, "bold"), bg='#2193b0')
-# label_keterangan.pack(pady=2)
