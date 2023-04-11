@@ -5,6 +5,7 @@
 
 # Import modul tkinter
 import tkinter as tk
+from tkinter import messagebox
 
 # Fungsi konversi bilangan
 def konversi_awal(num, base):
@@ -49,7 +50,10 @@ def ascii(string):
 def konversi_ascii():
     string = label_input2.get()
     nilai_ascii = ascii(string)
-    hasil_ascii.config(text="\n" + ", ".join(str(value) for value in nilai_ascii), font=("Arial", 14))
+    if not nilai_ascii:  
+         messagebox.showerror("Error", "Nilai ASCII kosong.")  # tampilan pesan error
+    else:
+        hasil_ascii.config(text="\n" + ", ".join(str(value) for value in nilai_ascii), font=("Arial", 14))
 
 #Membuat window GUI
 root = tk.Tk()
@@ -62,6 +66,7 @@ root.configure(bg='#2193b0')
 # Bagian konverter sistem bilangan
 inputan = tk.Entry(root, width=50)
 inputan.pack(pady=10)
+
 
 label_keterangan = tk.Label(root, text="Konversi ke", font=("Arial", 14, "bold"), bg='#2193b0')
 label_keterangan.pack(pady=10)
